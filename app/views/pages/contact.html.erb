@@ -1,0 +1,16 @@
+<h1>Contact us</h1>
+
+<form action="/contact" method="get">
+  <label for="member">Member name</label>
+  <input type="text" name="member" value="<%= params[:member]%>">
+  <input type="submit" value="Search"> 
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ol>
+<p>please</p>
+
+<%= link_to  "Back", root_path %>
